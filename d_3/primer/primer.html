@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример блокировки текста</title>
+ 
+</head>
+<body>
+
+<h1>Формы</h1>
+<p class="no-select">
+<h3>Создание Web-форм</h3>
+    • &lt;FORM id="my_form" name="user_data"<br> 
+    method="post|get" action="form.php"&gt;<br>
+    • &lt;теги, формирующие элементы управления&gt;<br>
+    • &lt;/FORM&gt;
+</p>
+<p class="no-select">
+    <h3>Тег &lt;FIELDSET&gt;. Набор полей</h3>
+    • &lt;FIELDSET&gt;<br>
+    • &lt;LEGEND&gt;текст заголовка&lt;/LEGEND&gt;<br>
+    – &lt;элементы управления, объединяемые в группу&gt;<br>
+    • &lt;/FIELDSET&gt;
+</p>
+<p class="no-select">
+        <h3>Тег &lt;LABEL&gt;. Надписи</h3>
+        • &lt;LABEL&gt;<br>
+        • Check: &lt;INPUT TYPE="checkbox" NAME="box"&gt;<br>
+        • &lt;/LABEL&gt;<br>
+        • &lt;LABEL FOR="passwd"&gt;Пароль:&lt;/LABEL&gt;<br>
+        • &lt;INPUT TYPE="password" ID="passwd" NAME="password" SIZE="25"&gt;<br>
+        • &lt;HR&gt;<br>
+        • &lt;INPUT TYPE="password" ID="passwd" NAME="password" SIZE="25"&gt;<br>
+        • &lt;LABEL FOR="passwd"&gt; - пароль&lt;/LABEL&gt;
+    </p>
+    <p class="no-select">
+        <h3>Поля ввода/выбора данных</h3>
+        • &lt;INPUT <br>
+        – TYPE="text"&lt;<br>
+        – NAME="&lt;название переменной&gt;"<br>
+        – VALUE="&lt;изначальное значение&gt;"<br>
+        – MAXLENGTH="&lt;максимальное количество символов&gt;"<br>
+        – DISABLED<br>
+        – READONLY<br>
+        – TABINDEX="&lt;номер в порядке обхода&gt;"<br>
+        – AUTOFOCUS &lt;!--Может быть только один--&gt;<br>
+        • &gt;
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. Password</h3>
+        • &lt;label for="login"&gt;Имя: &lt;/label&gt;<br>
+        • &lt;INPUT TYPE="text" ID="login" NAME="login"<br>
+         AUTOFOCUS&gt;<br>
+        • &lt;label for="pass"&gt; Пароль: &lt;/label&gt;<br>
+        • &lt;INPUT TYPE="password" ID="pass"<br>
+         NAME="password"&gt;
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. Checkbox</h3>
+        • &lt;label&gt;<br>
+        – &lt;input type="checkbox" name="val_1" id="chbox1"<br> 
+        checked&gt; 1<br>
+        • &lt;/label&gt;<br>
+        • &lt;label&gt;<br>
+        – &lt;input type="checkbox" name="val_2" id="chbox2"&gt; 2<br>
+        • &lt;/label&gt;
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. Checkbox</h3>
+        &lt;label&gt;<br>
+        &lt;input type="checkbox" name="hobby[]"&gt; check1<br>
+        &lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;<br>
+        &lt;input type="checkbox" name="hobby[]"&gt; check2<br>
+        &lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;<br>
+        &lt;input type="checkbox" name="hobby[]"&gt; check3<br>
+        &lt;/label&gt;&lt;br&gt;<br>
+        Отправка массива значений
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. radio группа</h3>
+        • &lt;label&gt;<br>
+        • &lt;input type="radio" name="radio_group" value="value_01" id="Checkbox_Group1_0" checked&gt; 1<br>
+        • &lt;/label&gt;<br>
+        • &lt;label&gt;<br>
+        • &lt;input type="radio" name="radio_group" value="value_02" id="Checkbox_Group2_0"&gt; 2<br>
+        • &lt;/label&gt;
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;.</h3>
+        required и autocomplete<br>
+        • &lt;input type="email" name="email" placeholder="это обязательное поле" required&gt; <br>
+        • &lt;input type="text" name="text" autocomplete="off"&gt; <br>
+    </p>
+    <p class="no-select">
+        <h3>Кнопки</h3>
+        • &lt;input type="submit" value="Отправить"&gt;<br>
+        • &lt;input type="reset" value="Сбросить"&gt;<br>
+        • &lt;input type="image" src="email.gif"&gt;<br>
+        • &lt;input type="button" value="Кнопка"&gt;
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. file</h3>
+        • &lt;input type="file" name="file_Field" dir="ltr"&gt;<br>
+        • Требует наличия в теге form атрибута enctype="multipart/form-data"
+    </p>
+    <p class="no-select">
+        <h3>Тег &lt;TEXTAREA&gt;</h3>
+        • &lt;textarea name="text_area" lang="ru"&gt;<br>
+        – Текст по умолчанию<br>
+        • &lt;/textarea&gt;
+    </p>
+    <p class="no-select">
+        <h3>Тег &lt;SELECT&gt;</h3>
+        • &lt;select name="list" id="list"&gt;<br>
+        – &lt;option value="1"&gt;Минск&lt;/option&gt;<br>
+        – &lt;option value="2"&gt;Брест&lt;/option&gt;<br>
+        – &lt;option value="0" selected&gt;Город&lt;/option&gt;<br>
+        • &lt;/select&gt;
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. type</h3>
+        • &lt;input type="email" placeholder="введите адрес почты"&gt; &lt;br&gt;<br>
+        • &lt;input type="url" placeholder="введите адрес сайта"&gt; &lt;br&gt;<br>
+        • &lt;input type="date" placeholder="выберите дату"&gt; &lt;br&gt;<br>
+        • &lt;input type="time" placeholder="введите время"&gt; &lt;br&gt;<br>
+        • &lt;input type="number" min="0" max="100" step="10"&gt; &lt;br&gt;<br>
+        • &lt;input type="range" min="1" max="10"&gt; &lt;br&gt;<br>
+    </p>
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. pattern</h3>
+        <table border="1">
+            <tr>
+                <th>Шаблон</th>
+                <th>Ограничения</th>
+            </tr>
+            <tr>
+                <td>[A-Z]</td>
+                <td>Только заглавная латинская буква.</td>
+            </tr>
+            <tr>
+                <td>[0-9]</td>
+                <td>Одна цифра от 0 до 9.</td>
+            </tr>
+            <tr>
+                <td>[0-9]{3,7}</td>
+                <td>От 3 до 7 цифр.</td>
+            </tr>
+            <tr>
+                <td>.*</td>
+                <td>Любое количество любых символов.</td>
+            </tr>
+            <tr>
+                <td>.*\. ?</td>
+                <td>Цифры от 7 до 9 (7,8,9).</td>
+            </tr>
+            <tr>
+                <td>Номер телефона</td>
+                <td>в формате (+375) 29 29 29 299.</td>
+            </tr>
+        </table>
+    </p>            
+    <p class="no-select">
+        <h3>Атрибуты &lt;INPUT&gt;. multiple и placeholder</h3>
+        • &lt;input type="text" placeholder="Введите текст"&gt; &lt;br&gt;<br>
+        • &lt;input type="file" name="file_Field[]" id="file_Field" multiple&gt; &lt;br&gt;<br>
+        • &lt;input type="email" name="email[]" id="email" multiple&gt; &lt;br&gt;<br>
+    </p>    
+</body>
+</html>
+
