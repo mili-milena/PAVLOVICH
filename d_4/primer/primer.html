@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример блокировки текста</title>
+</head>
+<body>
+    <p class="no-select">
+        <h1>Введение в CSS</h1>
+        Введение в CSS<br>
+        Определение селекторов<br>
+    </p>
+<p class="no-select">
+    <h2>Создание стилей CSS</h2>
+    • селектор {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– атрибут-стиля 1: значение 1;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– атрибут-стиля 2: значение 2;<br>
+    • }<br>
+    • селектор { атрибут-стиля 1: значение 1;}<br>
+</p>
+<p class="no-select">
+    <h2>Стиль переопределения тега</h2>
+    • P { color: #0000FF; }<br>
+    • EM {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– color: #00FF00;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– font-weight: bold;<br>
+    • }<br>
+    • BODY {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– background-color: #000000;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– color: #FFFFFF;<br>
+    • }<br>
+</p>
+<p class="no-select">
+    <h2>Стилевой класс</h2>
+    • &lt;p class="redtext"&gt;Это красный текст&lt;/p&gt;<br>
+    • &lt;P&gt;&lt;STRONG CLASS="attention"&gt;Стилевой класс требует явной привязки атрибутом тега CLASS!&lt;/STRONG&gt;&lt;/P&gt;<br>
+    • &lt;p class="redtext"&gt;Это еще один красный текст&lt;/p&gt;<br>
+    • &lt;P&gt;&lt;STRONG CLASS="attention"&gt;Тут тоже текст такой же как и выше в классе attention&lt;/STRONG&gt;&lt;/P&gt;<br>
+    • .redtext { color: #FF0000 }<br>
+    • .attention {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– color: #FF0000;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– font-style: italic;<br>
+    • }<br>
+</p>
+<p class="no-select">
+    <h2>Сложение стилей</h2>
+    • .attention {<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– color: #FF0000;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;– font-style: italic;<br>
+    • }<br>
+    • .bigtext { font-size: large }<br>
+    • &lt;STRONG CLASS="attention bigtext"&gt;Стилевой класс требует явной привязки атрибутом тега CLASS!&lt;/STRONG&gt;<br>
+    • Первый: attention<br>
+    • Потом добавится: bigtext<br>
+</p>
+<p class="no-select">
+    <h2>Именованный стиль</h2>
+    • #bigtext { font-size: large }<br>
+    • . . .<br>
+    • &lt;P ID="bigtext"&gt;Это большой текст.&lt;/P&gt;<br>
+    • Значение атрибута id уникально в пределах документа<br>
+</p>
+<p class="no-select">
+    <h2>Комбинированные стили</h2>
+    • P EM { color: #0000FF }<br>
+    • &lt;P&gt;&lt;EM&gt;Этот текст&lt;/EM&gt; станет синим.&lt;/P&gt;<br>
+    • &lt;EM&gt;А этот не станет.&lt;/EM&gt;<br>
+</p>
+<p class="no-select">
+    <h1>Комбинированные стили</h1>
+    • &lt;ul class="menu"&gt;<br>
+    • &nbsp;&nbsp;&lt;li class="menuItemDefault"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Item 01&lt;/a&gt;<br>
+    &nbsp;&nbsp;&lt;/li&gt;<br>
+    • &nbsp;&nbsp;&lt;li class="menuItemDefault menuItemCurrent"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Item 02&lt;/a&gt;<br>
+    &nbsp;&nbsp;&lt;/li&gt;<br>
+    • &nbsp;&nbsp;&lt;li class="menuItemDefault menuItemSelected"&gt;<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;Item 03&lt;/a&gt;<br>
+    &nbsp;&nbsp;&lt;/li&gt;<br>
+    • &lt;/ul&gt;<br>
+    • .menu {some: styles;}<br>
+    • .menu .menuItemDefault {some: styles;}<br>
+    • .menu .menuItemCurrent {some: styles;}<br>
+    • .menu .menuItemSelected {some: styles;}<br>
+</p>
+<p class="no-select">
+    <h2>Комбинированные стили</h2>
+    • p.mini {<br>
+    • &nbsp;&nbsp;color: #FF0000;<br>
+    • &nbsp;&nbsp;font-size: smaller;<br>
+    • }<br>
+    • p.sel strong { color: #FF0000; }<br>
+    • ####################################<br>
+    • p.mini { font-size: smaller; }<br>
+    • p.mini, p.sel strong { color: #FF0000; }<br>
+    • &lt;p class="mini"&gt;Этот текст красный и маленький&lt;/p&gt;<br>
+    • &lt;p class="sel"&gt;Обычный текст &lt;strong&gt;красный текст&lt;/strong&gt;&lt;/p&gt;<br>
+</p>
+<p class="no-select">
+    <h2>Встроенные стили</h2>
+    – &lt;P STYLE="font-size: smaller; font-style: italic"&gt;<br>
+    &nbsp;&nbsp;Маленький курсивчик.<br>
+    – &lt;/P&gt;<br>
+    • Применяется в самую последнюю очередь<br>
+    • В основном используется для задания стилей форматированного текста полей ввода<br>
+</p>
+<p class="no-select">
+    <h2>Таблицы стилей</h2>
+    • Внутренняя таблица стилей:<br>
+    • &lt;HEAD&gt;<br>
+    • &lt;STYLE&gt;<br>
+    – .redtext { color: #FF0000 }<br>
+    – #bigtext { font-size: large }<br>
+    – EM { color: #00FF00;<br>
+    – &nbsp;&nbsp;font-weight: bold }<br>
+    – P EM { color: #0000FF }<br>
+    • &lt;/STYLE&gt;<br>
+    • &lt;/HEAD&gt;<br>
+</p>
+<p class="no-select">
+    <h2>Таблицы стилей</h2>
+    • Подключение файла внешней таблицы стилей:<br>
+    – &lt;HEAD&gt;<br>
+    • &lt;LINK REL="stylesheet" HREF="адрес файла таблицы стилей" TYPE="text/css"&gt;<br>
+    – &lt;/HEAD&gt;<br>
+    • Внутренность файла внешней таблицы стилей:<br>
+    – .redtext { color: #FF0000 }<br>
+    – #bigtext { font-size: large }<br>
+    – EM { color: #00FF00;<br>
+    &nbsp;&nbsp;font-weight: bold }<br>
+    – P EM { color: #0000FF }<br>
+    • Импорт внешней таблицы стилей внутри CSS файла:<br>
+    – @import "/style/main.css" screen;<br>
+</p>
+<p class="no-select">
+    <h2>Таблицы стилей</h2>
+    • Могут присутствовать сразу несколько таблиц:<br>
+    • &lt;HEAD&gt;<br>
+    – . . . <br>
+    – &lt;LINK REL="stylesheet" HREF="styles1.css" TYPE="text/css" MEDIA="screen"&gt;<br>
+    – &lt;LINK REL="stylesheet" HREF="styles2.css" TYPE="text/css" MEDIA="print"&gt;<br>
+    – . . . <br>
+    – &lt;STYLE&gt;<br>
+    – . . . <br>
+    – &lt;/STYLE&gt;<br>
+    – . . . <br>
+    • &lt;/HEAD&gt;<br>
+</p>
+<p class="no-select">
+    <h2>Приоритеты выполнения стиля:</h2>
+    • &lt;LINK REL="stylesheet" HREF="styles1.css" TYPE="text/css"&gt;<br>
+    – .redtext { color: #FF0000 }<br>
+    – #bigtext { font-size: large }<br>
+    – EM { color: #00FF00;<br>
+    &nbsp;&nbsp;font-weight: bold }<br>
+    • &lt;STYLE&gt;<br>
+    – .redtext { color: #0000FF }<br>
+    – EM { font-size: smaller }<br>
+    • &lt;/STYLE&gt;<br>
+    • &lt;P CLASS="redtext"&gt;Это красный текст.&lt;/P&gt;<br>
+    • &lt;P ID="bigtext" STYLE="color: #FFFF00"&gt;Это большой текст.&lt;/P&gt;<br>
+    • &lt;P&gt;&lt;EM&gt;Это курсив.&lt;/EM&gt;&lt;/P&gt;<br>
+</p>
+<p class="no-select">
+    <h2>Правила каскадности:</h2>
+    – &lt;LINK REL="stylesheet" HREF="styles1.css" TYPE="text/css"&gt;<br>
+    – &lt;LINK REL="stylesheet" HREF="styles2.css" TYPE="text/css"&gt;<br>
+    • Более конкретные стили имеют приоритет перед менее конкретными:<br>
+    – .class1 {color: #555}<br>
+    – p {color: #888}<br>
+    • Если к тегу привязаны несколько стилевых классов, то те, что указаны правее, имеют приоритет перед указанными левее.<br>
+    • &lt;p class="class_1" class="class_2"&gt;&lt;/p&gt;<br>
+</p>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
