@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+
+    <style>
+ .body{
+            height: 1000px;
+        }
+		.header{
+            top: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            text-align: center;
+            height: 50px;
+			background:#dce9d4
+            
+		}
+        .menu{
+            left: 0;
+            top: 50px;
+            position: fixed;
+            width: 200px;
+            float: left;
+            height: 550px;
+			background:#b4f8ef;
+
+		}
+        .menu ul {
+        margin-left: 0px;
+        color: #8696f4;
+        text-decoration: none;
+        text-align: left;
+        font-size: 14px ;
+        }
+        .menu a:link {
+            color: #8696f4;
+            text-decoration: none;
+        }
+        .menu a:visited {
+            color: #8696f4; 
+            text-decoration: none;
+        }
+        .menu a:hover {
+            color: rgb(0, 0, 0); 
+            text-decoration: none;
+        }
+        .menu a:active {
+            color: rgb(0, 0, 0); 
+            text-decoration: none;
+        }
+        .content{
+			background:#ccd9f6;
+	        top: 50px;
+            left: 200px;
+            right: 200px;
+            position: fixed;
+            height: 550px; 
+            overflow: scroll;
+        }
+        .banner{
+            right: 0;
+            top: 50px;
+            position: fixed;
+            width: 200px;
+            float: right;
+            height: 550px;
+			background:#e6d2dc;
+
+		}
+        .footer{
+            left: 0;
+            right: 0;
+            top: 583px;
+            position: fixed;
+            height: 50px;
+			background:#779de7;
+
+		}
+        .wrap{
+			background:#cecece;	
+		}
+		.clear{
+			clear:both;		
+		}
+        .leftBlock {
+            width: 30%;
+            background-color: pink;
+            color: white;
+            float: left;
+            text-align: center;
+        }
+
+        .centerBlock {
+            width: 50%;
+            background-color: green;
+            color: white;
+            float: left;
+            text-align: center;
+        }
+
+        .rightBlock {
+            width: 20%;
+            background-color: blue;
+            color: white;
+            float: right;
+            text-align: center;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+
+    <body>
+        <div class="header">header</div>
+        <div class="wrap">
+            <div class="menu">
+                <h2>Menu</h2>
+                <ul>
+                    <li><a href="../../exapmp/index.html">Menu</a></li>
+                    <li><a href="../../exapmp/day_1/index-add.html">День 1</a></li>
+                    <li><a href="../../exapmp/day_2/index.html">День 2</a></li>    
+                        <li><a href="../../exapmp/day_3/1/index.html"> День 3-задание 1</a></li>
+                        <li><a href="../../exapmp/day_3/2/forms.html">День 3-задание 2 </a></li>
+                    
+                    <li><a href="../../exapmp/day_4/1.html">день 4</a></li>
+                    <li>Примеры день 5 </li>
+                    <ul>
+                    <li><a href="../../exapmp/1.html">1</a></li>
+                    <li><a href="../../exapmp/2.html">2</a></li>
+                    <li><a href="../../exapmp/3.html">3</a></li>
+                    <li><a href="../../exapmp/4.html">4</a></li>
+                    <li><a href="../../exapmp/5.html">5</a></li>
+                    <li><a href="../../exapmp/9.html">6</a></li>
+                </ul>
+                </ul>
+            </div>
+            <div class="banner">banner</div>
+            <div class="content">
+                <div class="clearfix">
+                    <div class="leftBlock">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore quisquam nesciunt veniam necessitatibus odit nobis ut, cupiditate alias porro nam repellat. Quos, nobis. Sapiente, in optio! Id magnam veniam dicta!</div>
+                    <div class="centerBlock">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cupiditate a facilis? Soluta accusamus pariatur veritatis numquam maxime, assumenda odit voluptate, reprehenderit quisquam minima repellat? Quidem autem est beatae inventore?</div>
+                    <div class="rightBlock">Правый блок</div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="footer">footer</div>
+    
+    </body>
+    
+
+
+</body>
+
+</html>

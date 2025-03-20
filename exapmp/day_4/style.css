@@ -1,0 +1,83 @@
+@import "link_to_style_screen.css" screen;
+@import "link_to_style_print.css" print;
+
+.body{
+    height: 1000px;
+}
+.header{
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    text-align: center;
+    height: 50px;
+    background:#dce9d4
+    
+}
+.menu{
+    left: 0;
+    top: 50px;
+    position: fixed;
+    width: 200px;
+    float: left;
+    height: 550px;
+    background:#b4f8ef;
+
+}
+.menu ul {
+margin-left: 0px;
+color: #8696f4;
+text-decoration: none;
+text-align: left;
+font-size: 14px ;
+}
+.menu a:link {
+    color: #8696f4;
+    text-decoration: none;
+}
+.menu a:visited {
+    color: #8696f4; 
+    text-decoration: none;
+}
+.menu a:hover {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+.menu a:active {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+.content{
+    background:#ccd9f6;
+    top: 50px;
+    left: 200px;
+    right: 200px;
+    position: fixed;
+    height: 550px; 
+    overflow: scroll;
+}
+.banner{
+    right: 0;
+    top: 50px;
+    position: fixed;
+    width: 200px;
+    float: right;
+    height: 550px;
+    background:#e6d2dc;
+
+}
+.footer{
+    left: 0;
+    right: 0;
+    top: 583px;
+    position: fixed;
+    height: 50px;
+    background:#779de7;
+
+}
+.wrap{
+    background:#cecece;	
+}
+.clear{
+    clear:both;		
+}

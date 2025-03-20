@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <style>
+        .body{
+            height: 1000px;
+        }
+		.header{
+            top: 0;
+            left: 0;
+            right: 0;
+            position: fixed;
+            text-align: center;
+            height: 50px;
+			background:#dce9d4
+            
+		}
+        .menu{
+            left: 0;
+            top: 50px;
+            position: fixed;
+            width: 200px;
+            float: left;
+            height: 550px;
+			background:#b4f8ef;
+
+		}
+        .menu ul {
+        margin-left: 0px;
+        color: #8696f4;
+        text-decoration: none;
+        text-align: left;
+        font-size: 14px ;
+        }
+        .menu a:link {
+            color: #8696f4;
+            text-decoration: none;
+        }
+        .menu a:visited {
+            color: #8696f4; 
+            text-decoration: none;
+        }
+        .menu a:hover {
+            color: rgb(0, 0, 0); 
+            text-decoration: none;
+        }
+        .menu a:active {
+            color: rgb(0, 0, 0); 
+            text-decoration: none;
+        }
+        .content{
+			background:#ccd9f6;
+	        top: 50px;
+            left: 200px;
+            right: 200px;
+            position: fixed;
+            height: 550px; 
+            overflow: scroll;
+        }
+        .banner{
+            right: 0;
+            top: 50px;
+            position: fixed;
+            width: 200px;
+            float: right;
+            height: 550px;
+			background:#e6d2dc;
+
+		}
+        .footer{
+            left: 0;
+            right: 0;
+            top: 583px;
+            position: fixed;
+            height: 50px;
+			background:#779de7;
+
+		}
+        .wrap{
+			background:#cecece;	
+		}
+		.clear{
+			clear:both;		
+		}
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="header">header</div>
+	<div class="wrap">
+		<div class="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../../index.html">Menu</a></li>
+                <li><a href="../../day_1/index-add.html">День 1</a></li>
+                <li><a href="../../day_2/index.html">День 2</a></li>    
+                    <li><a href="../../day_3/1/index.html"> День 3-задание 1</a></li>
+                    <li><a href="../../day_3/2/forms.html">День 3-задание 2 </a></li>
+                
+                <li><a href="../../day_4/1.html">день 4</a></li>
+                <li>Примеры день 5 </li>
+                <ul>
+                <li><a href="../../1.html">1</a></li>
+                <li><a href="../../2.html">2</a></li>
+                <li><a href="../../3.html">3</a></li>
+                <li><a href="../../4.html">4</a></li>
+                <li><a href="../../5.html">5</a></li>
+                <li><a href="../../9.html">6</a></li>
+            </ul>
+            </ul>
+        </div>
+		<div class="banner">banner</div>
+		<div class="content">
+            <h1 style="text-align: center;">Заполните анкету</h1>
+    <form>
+        <fieldset>
+            <legend>Личные данные</legend>
+            <input type="text" name="surname" required pattern="[А-Яа-яЁё]{1,25}" maxlength="25" autofocus
+                placeholder="Фамилия"> <br>
+            <input type="text" name="name" required pattern="[А-Яа-яЁё]{1,20}" maxlength="20" placeholder="Имя"><br>
+            <input type="text" name="patronymic" required pattern="[А-Яа-яЁё]{1,24}" maxlength="24"
+                placeholder="Отчество"><br>
+
+
+            <fieldset>
+                <legend>Паспортные данные</legend>
+                <input type="text" name="passport_series" required pattern="[A-Z]{2}" maxlength="2" placeholder="AA"
+                    style="width: 20px;">
+                <input type="text" name="passport_number" required pattern="\d{7}" maxlength="7" placeholder="1234567">
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Дата рождения</legend>
+                <input type="number" name="birth_year" required min="1900" max="2100" step="1" placeholder="2000"> <br>
+                <select name="birth_month">
+                    <option>Январь</option>
+                    <option>Февраль</option>
+                    <option>Март</option>
+                    <option>Апрель</option>
+                    <option>Май</option>
+                    <option>Июнь</option>
+                    <option>Июль</option>
+                    <option>Август</option>
+                    <option>Сентябрь</option>
+                    <option>Октябрь</option>
+                    <option>Ноябрь</option>
+                    <option>Декабрь</option>
+                </select> select: Месяц рождения <br>
+                <input type="number" name="birth_date" required min="1" max="31" step="1"> 
+            </fieldset>
+            <select name="nationality" required>
+                <option value="РБ">РБ</option>
+                <option value="Россия">Россия</option>
+                <option value="Украина">Украина</option>
+                <option value="Казахстан">Казахстан</option>
+            </select> <br>
+            <label>Адрес: <br> <textarea name="address" rows="3" cols="30"></textarea></label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Интересы</legend>
+            <fieldset>
+                <legend>array: Хобби</legend>
+                <label><input type="checkbox" name="hobby" value="Рыбалка"> Рыбалка</label> <br>
+                <label><input type="checkbox" name="hobby" value="Астрономия"> Астрономия</label> <br>
+                <label><input type="checkbox" name="hobby" value="Дайвинг"> Дайвинг</label> <br>
+                <label><input type="checkbox" name="hobby" value="Марки"> Марки</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Домашние животные (возможность выбора нескольких вариантов):</legend>
+                 <br>
+                <select name="pets" multiple>
+                    <optgroup label="Попугаи">
+                        <option>Волнистый</option>
+                        <option>Ара</option>
+                        <option>Неразлучник</option>
+                    </optgroup>
+                    <optgroup label="Рыба">
+                        <option>Караси</option>
+                        <option>Окуни</option>
+                        <option>Осётр</option>
+                    </optgroup>
+                    <optgroup label="Птицы">
+                        <option>Стая ворон</option>
+                        <option>Лис</option>
+                        <option>Акст</option>
+                        <option>Декоративные</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>Данные для входа</legend>
+            <input type="text" name="login" required pattern="[A-Za-z0-9]{5,20}" minlength="5" maxlength="20"
+                placeholder="Логин">  <br>
+            <input type="password" name="password" required pattern="[A-Za-z0-9]{10,20}" minlength="10" maxlength="20"
+                placeholder="Пароль"> <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Координаты</legend>
+            <input type="email" name="email" required placeholder="введите адрес почты"><br>
+            <input type="url" name="website" placeholder="введите адрес сайта"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Цифры</legend>
+            <input type="number" name="number" min="-2.5" max="2.5" step="0.1"> <br>
+            <input type="range" name="range" min="1" max="10"> 
+        </fieldset>
+        <fieldset>
+            <legend>Кнопки управления</legend>
+            <button type="submit">Отправить</button>
+            <button type="reset">Сбросить</button> <br>
+            <input type="image" src="email.jpg">
+            - при нажатии на эту кнопку ничего не происходит
+        </fieldset>
+    </form>
+    <div class="clear"></div>
+	</div>
+	<div class="footer">footer</div>
+</body>
+</html>
