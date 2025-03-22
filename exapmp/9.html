@@ -1,46 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3</title>
-    
+    <title>9</title>
     <style>
-               .content div {
-            padding: 20px;
-            margin: 10px;
-            border: 2px solid #333;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            text-align: center;
-            min-width: 80px;
-        }
-
-        .content div[style*="float: left"]:not([style*="right"]) {
-            background-color: red;
-        }
-
-        .content div[style*="float: right"] {
-            background-color: blue;
-        }
-
-        .content div:nth-last-of-type(-n+3) {
-            background-color: greenyellow;
-        }
-
-        hr {
-            clear: both;
-            margin: 30px 0;
-            border-top: 3px #666;
-        }
-
-        .content div::after {
-            content: attr(data-number);
-            display: block;
-            font-size: 24px;
-            color: #333;
-        }
         .body{
             height: 1000px;
         }
@@ -120,8 +84,26 @@
 		.clear{
 			clear:both;		
 		}
+        .inherit-parent {
+            width: 220px;
+            height: 120px;
+            background-color: #fafafa;
+            overflow: auto;
+            border: 2px dashed #333;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .inherit-child {
+            width: 200px;
+            height: 100px;
+            background-color: #ecf79c;
+            overflow: inherit;
+            border: 1px solid #000;
+            padding: 5px;
+        }
     </style>
 </head>
+
 
 <body>
     <div class="header">header</div>
@@ -145,29 +127,28 @@
                 <li><a href="../../exapmp/5.html">5</a></li>
                 <li><a href="../../exapmp/9.html">6</a></li>
             </ul>
+            <li><a href="../../exapmp/ind/index.html">Индивидуальные задания</a></li>
             </ul>
         </div>
 		<div class="banner">banner</div>
 		<div class="content">
-            <div style="float: left;">1</div>
-            <div style="float: left;">2</div>
-            <div style="float: left;">3</div>
-            <br>
-            <hr>
-            <div style="float: right;">1</div>
-            <div style="float: right;">2</div>
-            <div style="float: right;">3</div>
-            <br>
-            <hr>
-            <div style="float: right;">1 (right)</div>
-            <div style="float: left;">2 (left)</div>
-            <div style="float: right;">3 (right)</div>
+            <h2> overflow: inherit</h2>
+            <div class="inherit-parent">
+                <p>Родительский контейнер</p>
+                <div class="inherit-child">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorem quia libero quis dicta,
+                        tenetur ipsum alias ullam ipsa? Tempore cupiditate iste explicabo debitis! Voluptatum impedit
+                        numquam beatae illum sequi!
+                    </p>
+                </div>
+            </div>
         </div>
 		<div class="clear"></div>
 	</div>
 	<div class="footer">footer</div>
 
-   
-</body>
 
+    
+</body>
 </html>
